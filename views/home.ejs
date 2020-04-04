@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Weather App</title>
+    <style>
+          body {
+  background-color:#FFE4B5;
+}
+            .main {
+                text-align:center;
+            }
+            .task {
+                font-family:sans-serif;
+                color:#A0522D;
+                font-size:50px;
+                font-weight:bold;
+            }
+
+            .btn{
+              background-color: darkorchid;
+              padding: 1px 8px;
+              font-weight: bold;
+            	text-align: center;
+            	color: goldenrod;
+            	border-radius: 5mm;
+            	animation: htp-animation 10s infinite;
+          }
+          .container{
+            text-align: center;
+          }
+        </style>
+  </head>
+  <body>
+    <div class = "main">
+          <div class ="task">How's the Weather?</div>
+      </div>
+      <br>
+      <br>
+    <div class="container">
+
+        <form action="/" method="post">
+          <input name="city" type="text"  placeholder="Enter a City" required>
+          <input type="submit" class="btn" value="Enter">
+        </form>
+        <% if(weather !== null){ %>
+          <p><%= weather %></p>
+        <% } %>
+
+        <% if(error !== null){ %>
+          <p><%= error %></p>
+        <% } %>
+
+    </div>
+  </body>
+</html>
